@@ -1,0 +1,42 @@
+{
+  "lock": false,
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
+    "manifest": "deno task cli manifest $(pwd)",
+    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "build": "deno run -A dev.ts build",
+    "preview": "deno run -A main.ts",
+    "update": "deno run -A -r https://fresh.deno.dev/update ."
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "fresh",
+        "recommended"
+      ]
+    }
+  },
+  "exclude": [
+    "**/_fresh/*"
+  ],
+  "imports": {
+    "$fresh/": "https://deno.land/x/fresh@1.7.3/",
+    "preact": "https://esm.sh/preact@10.22.0",
+    "preact/": "https://esm.sh/preact@10.22.0/",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.3",
+    "@std/log": "jsr:@std/log@^0.224.13",
+    "mongoose": "npm:mongoose@^8.0.0",
+    "$std/": "https://deno.land/std@0.216.0/",
+    "jsonwebtoken": "npm:jsonwebtoken@^9.0.2",
+    "@da/bcrypt": "jsr:@da/bcrypt@^1.0.1",
+    "@fresh-charts/island": "https://deno.land/x/fresh_charts@0.3.1/island.tsx",
+    "chart.js": "https://esm.sh/stable/chart.js@4.4.0/auto?target=es2022"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  }
+}

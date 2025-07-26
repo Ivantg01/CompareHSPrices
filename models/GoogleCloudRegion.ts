@@ -1,0 +1,21 @@
+/** Schema and model for GoogleCloudRegions */
+import mongoose from "mongoose";
+import { Region } from "../types.ts";
+
+const Schema = mongoose.Schema;
+
+const GoogleCloudRegionSchema = new Schema({
+  name: { type: String, sparse: true, unique: true },
+  displayName: { type: String, required: true },
+  regionalDisplayName: { type: String, required: true },
+  regionalName: { type: String, required: true },
+  active: { type: Boolean, required: true },
+}, { timestamps: true });
+
+export type GoogleCloudRegionModelType =
+  & mongoose.Document
+  & Omit<Region, "cloud">;
+export default mongoose.model<GoogleCloudRegionModelType>(
+  "GoogleCloudRegion",
+  GoogleCloudRegionSchema,
+);
