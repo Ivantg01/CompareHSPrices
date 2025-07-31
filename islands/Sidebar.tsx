@@ -141,15 +141,6 @@ const Sidebar: FunctionComponent<SidebarProps> = (
                 <div className="row">
                   <div className="col">
                     <a className="nav-link text-white" href="/app/statsInfra">
-                      <i className="bi bi-bar-chart-line-fill fs-3 ms-3 me-3">
-                      </i>
-                      {isMenuExpanded.value && "Evolución"}
-                    </a>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <a className="nav-link text-white" href="/app/statsInfra">
                       <i className="bi bi-stack fs fs-3 ms-3 me-3">
                       </i>
                       {isMenuExpanded.value && "Instancias"}
