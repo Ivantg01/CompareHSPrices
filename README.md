@@ -13,9 +13,9 @@ en https://github.com/Ivantg01/ScraperHSPrices
 ## Capturas de pantalla interfaz web
 
 <img src="./screenshots/Imagen1.jpg" width="90%"></img>
+<img src="./screenshots/Imagen2.jpg" width="90%"></img>
 <img src="./screenshots/Imagen3.jpg" width="90%"></img>
 <img src="./screenshots/Imagen4.jpg" width="90%"></img>
-<img src="./screenshots/Imagen2.jpg" width="90%"></img>
 <img src="./screenshots/Imagen5.jpg" width="90%"></img>
 <img src="./screenshots/Imagen6.jpg" width="90%"></img>
 
